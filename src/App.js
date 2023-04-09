@@ -1,11 +1,13 @@
 
 import './App.css';
 import Nav from './Components/Nav';
+import Packagesview from './Components/Packagesview';
 
 function App() {
   return (
-    <div>
+    <div className='main-component' style={{backgroundColor:'black'}}>
     <Nav/>   
+    <Packagesview/>
     </div>
   );
 }
