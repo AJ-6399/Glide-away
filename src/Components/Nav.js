@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Admin from './Admininput'
 
 export class Nav extends Component {
   render() {
@@ -25,8 +26,7 @@ export class Nav extends Component {
         </li>
         
       </ul>
-      
-     
+      <Admin/>
         <button className="btn btn-outline-dark" >Admin Login</button>
     </div>
   </div>
