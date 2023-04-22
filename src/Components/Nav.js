@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Admin from './Admininput'
+import Admin from './Login'
 
 export class Nav extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg bg-warning">
-  <div className="container-fluid">
+      <div style={{backgroundColor:'black'}}>
+        <nav className="navbar navbar-expand-lg bg-warning" >
+  <div className="container-fluid ">
     
     <a className="navbar-brand" style={{fontSize:30}} href="/">GlideAway</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +24,9 @@ export class Nav extends Component {
         <li className="fw-bold">
           <a className="nav-link active" style={{fontSize:20,}} href="/">Contact Us</a>
         </li>
-        
       </ul>
       <Admin/>
-        <button className="btn btn-outline-dark" >Admin Login</button>
+       
     </div>
   </div>
 </nav>
