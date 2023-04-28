@@ -8,15 +8,15 @@ export default function Admin(){
     const[password,setPassword]=useState([])
     const adminRedirect=useNavigate();
   
-  function handleLoginClick(u){
+  function handleLoginClick(u,pswrd){
  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/admins/verify/${u}`).then((res)=>{
-  if(res.data.length!==0)
+  if(res.data.length!==0&&pswrd!=null)
   {
     adminRedirect('/dashboard')
     alert('Login Success');
   }
   else{
-    alert('Try again');
+    alert('Error.Check the fields you have entered');
   }
 
  })
@@ -33,7 +33,7 @@ export default function Admin(){
   </div>
   <div className="col">
     
-    <button onClick={()=>handleLoginClick(username)} className="btn btn-outline-dark" >Admin Login</button>
+    <button onClick={()=>handleLoginClick(username,password)} className="btn btn-outline-dark" >Admin Login</button>
  
 
    
