@@ -7,7 +7,9 @@ export default function Admin(){
     const[username,setUsername]=useState([])
     const[password,setPassword]=useState([])
     const adminRedirect=useNavigate();
-  
+  function handleLoginClick(){
+
+  }
   function handleLoginClick(u,pswrd){
  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/admins/verify/${u}`).then((res)=>{
   if(res.data.length!==0&&pswrd!=null)
@@ -21,7 +23,7 @@ export default function Admin(){
 
  })
    }
-
+  
     return (
       <>
       <div class='row g-3'>
