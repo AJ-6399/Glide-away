@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Admin(){
     const[username,setUsername]=useState([])
     const[password,setPassword]=useState([])
-    const adminRedirect=useNavigate();
+   // const adminRedirect=useNavigate();
   function handleLoginClick(){
 
   }
@@ -14,7 +14,7 @@ export default function Admin(){
  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/admins/verify/${u}`).then((res)=>{
   if(res.data.length!==0&&pswrd!=null)
   {
-    adminRedirect('/dashboard')
+    //adminRedirect('/dashboard')
     alert('Login Success');
   }
   else{
