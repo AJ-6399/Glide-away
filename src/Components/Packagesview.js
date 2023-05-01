@@ -6,8 +6,7 @@ export class Packagesview extends Component {
         constructor(){
             super();
             this.state={
-             jsonitems: this.jsonitems,
-             loading:false
+             jsonitems: this.jsonitems
             }
         }
         async componentDidMount(){
@@ -25,7 +24,7 @@ export class Packagesview extends Component {
         <div className='row my-4'>
         {this.state.jsonitems.map((element)=>{
             return <div className='col md-3 my-3'key={element.updated_at}>
-            <Packagesitem title={element.title} description={element.description} imageUrl={element.imageUrl}/>
+            <Packagesitem title={element.title} description={element.description.slice(0,30)+"..."} imageUrl={element.imageUrl}/>
             </div>
         }
     )
