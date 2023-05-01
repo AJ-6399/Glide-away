@@ -14,7 +14,12 @@ export default function Itinerary() {
     <div>
       <>
       <center>
-      <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide">
+      <ol className="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img style={{filter:'brightness(40%)'}} className="a-block" width="1600" height="600" src={url} alt="First slide"/>
