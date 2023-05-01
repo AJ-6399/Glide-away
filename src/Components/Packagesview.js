@@ -23,8 +23,8 @@ export class Packagesview extends Component {
       localStorage.setItem("imageUrl",imageUrl); 
      }
       return (
-        <div className='container my-4' style={{backgroundColor:'black'}}>
-        <h2 style={{color:'black'}}><center>Packages</center></h2>
+        <div className='container my-4'>
+        <h2 style={{color:'white'}}><center>Packages</center></h2>
         <div className='row my-4'>
         {this.state.jsonitems.map((element)=>{
             return <div className='col md-3 my-3'key={element.updated_at}>

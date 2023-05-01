@@ -37,14 +37,14 @@ function storeLocal(id,title,description,imageUrl){
     return (
         <div>
           <>
-         <div className='container my-4 '><h2><b>Dashboard</b></h2>
+         <div className='container my-4 ' style={{color:'white'
+        }}><h2><b>Dashboard</b></h2>
          <Link to='/create'>
          <button type="button" className="btn btn-dark my-3">Add new</button>
          </Link></div> 
-         
           <center>
             <div className='container mx-3'>
-          <table className="table table-striped" bgcolor='white'>
+          <table className="table table-striped" style={{borderTopLeftRadius:"22px",borderRadius:"22px"}} bgcolor='white'>
       <thead>
         <tr>
           <th scope="col">Title</th>

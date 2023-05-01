@@ -11,9 +11,9 @@ export class Packagesitem extends Component {
   <div className="card-body bg-secondary">
     <h4 className="card-title ">{title}</h4>
     <p className="card-text">{description}</p>
-    <Link to='/itinerary'>
-    <button onClick={viewitn} className="btn btn-sm btn-warning">View itinerary</button>
-    </Link>
+  
+    <a href='/itinerary' onClick={viewitn} className="btn btn-sm btn-warning">View itinerary</a>
+ 
   </div>
 </div>
       </div>

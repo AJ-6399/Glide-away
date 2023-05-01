@@ -18,6 +18,6 @@ test('Testing if item title is present',()=>{
 })
 test('Testing if item view link is present',()=>{
     render(<Packagesitem/>);
-    const button = screen.getAllByRole("button");
-    expect(button).toHaveLength(1); 
+    const link = screen.getAllByRole("link");
+    expect(link).toHaveLength(1); 
 })

@@ -15,11 +15,6 @@ useEffect(() => {
       <>
       <center>
       <div id="carouselExampleIndicators" className="carousel slide">
-      <ol className="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img style={{filter:'brightness(40%)'}} className="a-block" width="1600" height="600" src={url} alt="First slide"/>
@@ -28,9 +23,13 @@ useEffect(() => {
   </div>
     </div>
   </div>
+  <svg className='my-3' xmlns="http://www.w3.org/2000/svg" style={{color:'white'}}  width="50" height="50" fill="currentColor" className="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+</svg>
+
   <h3 className='my-3' style={{color:"orange",fontWeight:"950",fontSize:30}}>Itinerary</h3>
-<div className='container'>
-<p style={{fontSize:20,fontWeight:"550"}}>{description} </p>
+<div className='container my-3'>
+<p style={{fontSize:20,fontWeight:"550",color:'white'}}>{description} </p>
 </div>
 </div>
 </center>

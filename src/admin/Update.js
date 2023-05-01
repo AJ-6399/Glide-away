@@ -33,7 +33,7 @@ export default function Update() {
   return (
     <center>
     <div className='container my-5'>
-       <div style={{color:'black'}}><h2>Update item</h2></div> 
+       <div style={{color:'white'}}><h2>Update item</h2></div> 
       <div className='col g-3 my-4'>
         <div className="col-auto ">
     <input onChange={(e)=>setTitle(e.target.value)} type="text" value={title}

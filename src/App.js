@@ -1,6 +1,6 @@
 
 import Nav from './Components/Nav';
-import {Routes,Route } from 'react-router-dom';
+import {Routes,Route, BrowserRouter } from 'react-router-dom';
 import Create from './admin/Create';
 import Packagesview from './Components/Packagesview';
 import AdminPage from './Components/AdminPage';
@@ -14,6 +14,7 @@ function App() {
     <div>
 
     <Nav />
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/packages" element={<Packagesview/>}/>
@@ -23,6 +24,7 @@ function App() {
       <Route path="/itinerary" element={<Itinerary/>}/>
       <Route path="/*" element={<Notfound/>}/>
     </Routes>
+    </BrowserRouter>
     </div>
    
   );

@@ -24,8 +24,8 @@ export default function Create() {
   return (
     <center>
     <div className='container my-5'>
-       <div style={{color:'black'}}><h2>Add new item</h2></div> 
-      <div className='col g-3 my-4'>
+       <div style={{color:'white'}}><h2>Add new item</h2></div> 
+      <div className='col g-3 my-4' style={{borderRadius:"22px"}}>
         <div className="col-auto ">
     <input type="text" onChange={(e)=>setTitle(e.target.value)} className="form-control my-3" id="Title" placeholder="Title"/>
   </div>
