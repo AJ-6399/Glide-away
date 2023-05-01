@@ -12,7 +12,7 @@ import Home from './Components/Home';
 function App() {
   return (
     <div>
-     
+
     <Nav />
     <Routes>
       <Route path="/" element={<Home/>}/>

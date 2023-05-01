@@ -13,7 +13,7 @@ test('Testing Navbar Menus 1',()=>{
 })
 test('Testing Navbar Menu 2',()=>{
     render(<Nav/>);
-    const contact_us = screen.getByText(/Contact Us/i);
+    const contact_us = screen.getByText(/packages/i);
     expect(contact_us).toBeInTheDocument(); 
 })
 test('Checking Menu items to be 2',()=>{

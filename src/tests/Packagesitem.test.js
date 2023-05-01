@@ -16,8 +16,8 @@ test('Testing if item title is present',()=>{
     const itemtitle = screen.getAllByRole("heading");
     expect(itemtitle).toHaveLength(1); 
 })
-test('Testing if item description is present',()=>{
+test('Testing if item view link is present',()=>{
     render(<Packagesitem/>);
-    const itemlink = screen.getAllByRole("link");
-    expect(itemlink).toHaveLength(1); 
+    const button = screen.getAllByRole("button");
+    expect(button).toHaveLength(1); 
 })

@@ -8,7 +8,6 @@ export default function Home() {
     var random=Math.floor(Math.random()*3);
   return (
     <div>
-        {console.log(random)}
       <>
       <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel" data-interval="500">
   <div className="carousel-inner">

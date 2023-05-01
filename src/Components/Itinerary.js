@@ -4,8 +4,8 @@ export default function Itinerary() {
     const [title,setTitle]=useState([])
     const [url,setUrl]=useState([])
     const [description,setDescription]=useState([])
-    
-    useEffect(() => {
+  
+useEffect(() => {
          setTitle(localStorage.getItem("title"));
          setUrl(localStorage.getItem("imageUrl"));
          setDescription(localStorage.getItem("description"));

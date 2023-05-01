@@ -6,8 +6,8 @@ export default function AdminPage() {
 
 const [data,setData]=useState([])
 var length;
-const fetchData=()=>{
 
+const fetchData=()=>{
  axios.get("https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts").then(
     (res)=>{
         console.log(res);
@@ -65,7 +65,6 @@ function storeLocal(id,title,description,imageUrl){
             <Link to='/update'>
             <button onClick={()=>storeLocal(item.id,item.title,item.description,item.imageUrl)} type="button" className="btn btn-primary mx-1">Edit</button>
             </Link>
-            
             <button onClick={()=>deleteItem(item.id)} type="button" className="btn btn-danger mx-1">Delete</button>
           </td>
         </tr>

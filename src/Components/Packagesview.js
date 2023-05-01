@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Packagesitem from './Packagesitem';
-import AdminPage from './AdminPage';
 
 export class Packagesview extends Component {
     jsonitems=[];
@@ -10,7 +9,6 @@ export class Packagesview extends Component {
              jsonitems: this.jsonitems
             }
         }
-        
         async componentDidMount(){
         let api_url="https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts";
         let data=await fetch(api_url);
@@ -25,7 +23,7 @@ export class Packagesview extends Component {
       localStorage.setItem("imageUrl",imageUrl); 
      }
       return (
-        <div className='container my-4'>
+        <div className='container my-4' style={{backgroundColor:'black'}}>
         <h2 style={{color:'black'}}><center>Packages</center></h2>
         <div className='row my-4'>
         {this.state.jsonitems.map((element)=>{

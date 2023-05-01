@@ -27,7 +27,7 @@ export default function Update() {
       header
     }).then((res)=>{
         alert('Item updated');
-        updateRedirect('/');
+        updateRedirect('/dashboard');
     })
     }
   return (

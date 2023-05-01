@@ -2,15 +2,11 @@ import React from 'react'
 export default function Notfound() {
   return (
     <div className='container my-3 '>
-        <h2>
+        <h3>
             <center>
             404 Page Not Found !!
             </center>
-            
-        </h2>
-   
-    
-
+        </h3>
     </div>
   )
 }
