@@ -6,6 +6,7 @@ import Packagesview from './Components/Packagesview';
 import AdminPage from './Components/AdminPage';
 import Update from './admin/Update';
 import Notfound from './Components/Notfound';
+import Itinerary from './Components/Itinerary';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/create" element={<Create/>}/>
       <Route path="/dashboard" element={<AdminPage/>}/>
       <Route path="/update" element={<Update/>}/>
+      <Route path="/itinerary" element={<Itinerary/>}/>
       <Route path="/*" element={<Notfound/>}/>
     </Routes>
     </div>
