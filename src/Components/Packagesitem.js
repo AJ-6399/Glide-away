@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 export class Packagesitem extends Component {
   render() {
-    let {title,description,imageUrl}=this.props;
+    let {title,description,imageUrl,viewitn}=this.props;
+
     return (
       <div>
     <div className="card" style={{width: "18rem"}}>
@@ -9,7 +11,9 @@ export class Packagesitem extends Component {
   <div className="card-body bg-secondary">
     <h4 className="card-title ">{title}</h4>
     <p className="card-text">{description}</p>
-    <a href="/" className="btn btn-sm btn-warning">View itinerary</a>
+    <Link to='/itinerary'>
+    <button onClick={viewitn} className="btn btn-sm btn-warning">View itinerary</button>
+    </Link>
   </div>
 </div>
       </div>
