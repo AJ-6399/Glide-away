@@ -7,6 +7,7 @@ import AdminPage from './Components/AdminPage';
 import Update from './admin/Update';
 import Notfound from './Components/Notfound';
 import Itinerary from './Components/Itinerary';
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
      
     <Nav />
     <Routes>
-      <Route path="/" element={<Packagesview/>}/>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/packages" element={<Packagesview/>}/>
       <Route path="/create" element={<Create/>}/>
       <Route path="/dashboard" element={<AdminPage/>}/>
       <Route path="/update" element={<Update/>}/>
