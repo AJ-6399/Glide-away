@@ -1,4 +1,5 @@
 import React from 'react'
+import Admin from './Login';
 
 export default function Nav() {
   var menuitems=["Home","Contact Us"];
@@ -20,7 +21,9 @@ export default function Nav() {
     </li>
   </ul>
 </div>
+<Admin/>
 </div>
+
 </nav>
   </div>
   )

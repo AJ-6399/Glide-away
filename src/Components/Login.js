@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Navigate } from 'react-router-dom'
+import AdminPage from './AdminPage'
 
 export default function Admin(){
     const[username,setUsername]=useState([])
@@ -14,12 +15,18 @@ export default function Admin(){
  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/admins/verify/${u}`).then((res)=>{
   if(res.data.length!==0&&pswrd!=null)
   {
-    //adminRedirect('/dashboard')
+    //adminRedirect('/dashboard')'
     alert('Login Success');
+   
   }
   else{
     alert('Error.Check the fields you have entered');
   }
+  return (
+    <div>
+        <AdminPage/>
+      </div>
+      );
 
  })
    }

@@ -65,7 +65,7 @@ function storeLocal(id,title,description,imageUrl){
             <Link to='/update'>
             <button onClick={()=>storeLocal(item.id,item.title,item.description,item.imageUrl)} type="button" className="btn btn-primary mx-1">Edit</button>
             </Link>
-            <button type="button" className="btn btn-secondary mx-1">Preview</button>
+            
             <button onClick={()=>deleteItem(item.id)} type="button" className="btn btn-danger mx-1">Delete</button>
           </td>
         </tr>

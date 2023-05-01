@@ -40,8 +40,8 @@ export default function Update() {
     className="form-control my-3" id="Title" placeholder="Title"/>
   </div>
   <div className="col">
-    <input onChange={(e)=>setDescription(e.target.value)}  type="text" value={description} 
-    className="form-control my-3" id="Description" placeholder="Description" />
+    <textarea onChange={(e)=>setDescription(e.target.value)}  type="text" value={description} 
+    className="form-control my-3" placeholder='Description' rows="9"/>
   </div>
   <div className="col">
     <input onChange={(e)=>setUrl(e.target.value)}  type="text" value={url}
@@ -49,8 +49,6 @@ export default function Update() {
   </div>
   <div className="col">
     <button onClick={()=>update(id)} className="btn btn-primary my-3" >Update</button>
-
-  
   </div>
 </div>
     </div>
