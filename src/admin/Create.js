@@ -11,12 +11,16 @@ export default function Create() {
 
     const createPost=(e)=>{
         e.preventDefault();
-        axios.post("https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts",
+        axios.post("https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts",
         {
             "title":title,
             "description":description,
             "imageUrl":url,
-            header  
+            header  ,
+            headers: {
+              "Accept": "application/json",
+              'Content-Type': 'application/json'
+           } 
         });
         alert('Item added');
         addRedirect('/dashboard');
@@ -30,7 +34,8 @@ export default function Create() {
     <input type="text" onChange={(e)=>setTitle(e.target.value)} className="form-control my-3" id="Title" placeholder="Title"/>
   </div>
   <div className="col">
-    <input  type="text" onChange={(e)=>setDescription(e.target.value)} className="form-control my-3" id="Description" placeholder="Description" />
+    <textarea onChange={(e)=>setDescription(e.target.value)}  type="text" value={description} 
+    className="form-control my-3" placeholder='Description' rows="9"/>
   </div>
   <div className="col">
     <input  type="text" onChange={(e)=>setUrl(e.target.value)} className="form-control my-3" id="ImageUrl" placeholder="ImageUrl" />

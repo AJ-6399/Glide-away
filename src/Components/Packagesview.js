@@ -10,8 +10,13 @@ export class Packagesview extends Component {
             }
         }
         async componentDidMount(){
-        let api_url="https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts";
-        let data=await fetch(api_url);
+        let api_url="https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts";
+        let data=await fetch(api_url,{
+          headers: {
+            "Accept": "application/json",
+            'Content-Type': 'application/json'
+         } 
+        });
         let parsedData=await data.json();
         this.setState({jsonitems:parsedData})
         }

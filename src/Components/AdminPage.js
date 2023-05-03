@@ -6,18 +6,31 @@ export default function AdminPage() {
 
 const [data,setData]=useState([])
 var length;
+const originaccess={"Access-Control-Allow-Origin":"*"};
 
 const fetchData=()=>{
- axios.get("https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts").then(
+ axios.get("https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts",{
+  headers: {
+    "Accept": "application/json",
+    'Content-Type': 'application/json',
+    originaccess
+ } 
+ }).then(
     (res)=>{
-        console.log(res);
+      
         setData(res.data);
         length=res.data.length;
         console.log(length);
     })
 }
 function deleteItem(id){
-    axios.post(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts/delete/${id}`)
+    axios.get(`https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts/${id}`,{
+      headers: {
+        "Accept": "application/json",
+        'Content-Type': 'application/json',
+        originaccess
+     } 
+    })
     .then(()=>{
         fetchData();
         alert('Item deleted');
@@ -56,7 +69,9 @@ function storeLocal(id,title,description,imageUrl){
      {
         data.map((item)=>{
         return (
-        <tbody >
+          
+        <tbody key={item.updated_at}>
+    
         <tr>
           <td>{item.title}</td>
           <td>{item.imageUrl.slice(0,40)+"....."}</td>
@@ -68,7 +83,9 @@ function storeLocal(id,title,description,imageUrl){
             <button onClick={()=>deleteItem(item.id)} type="button" className="btn btn-danger mx-1">Delete</button>
           </td>
         </tr>
+        
       </tbody>
+     
             )
         })
       }
