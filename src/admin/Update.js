@@ -19,12 +19,16 @@ export default function Update() {
    
 
     function update(uid){
-    axios.post(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/posts/${uid}`,
+    axios.post(`https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts/${uid}`,
     {
      "title":title,
      "description":description,
      "imageUrl":url,
-      header
+      header,
+      headers: {
+        "Accept": "application/json",
+        'Content-Type': 'application/json'
+     } 
     }).then((res)=>{
         alert('Item updated');
         updateRedirect('/dashboard');

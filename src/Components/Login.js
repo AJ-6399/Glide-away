@@ -9,7 +9,7 @@ export default function Admin(){
    // const adminRedirect=useNavigate();
  
   function handleLoginClick(u,pswrd){
-  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/restapi_crud/public/api/admins/verify/${u}`).then((res)=>{
+  axios.get(`https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/admins/verify/${u}`).then((res)=>{
   if(res.data.length!==0&&pswrd!=null)
   {
     //adminRedirect('/dashboard')'
