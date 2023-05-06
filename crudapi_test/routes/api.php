@@ -12,6 +12,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/posts',function(){
     return Posts::all();
 });
+// GET method implementation to fetch all data
 
 Route::post('/posts',function(){
 
@@ -21,6 +22,7 @@ Route::post('/posts',function(){
         'imageUrl'=>request('imageUrl')
     ]);
 });
+// POST method implementation to create new api data by accepting the following input from the user.
 
 Route::post('/posts/{id}',function(Posts $id){
 
@@ -31,11 +33,15 @@ Route::post('/posts/{id}',function(Posts $id){
         'imageUrl'=>request('imageUrl')
     ]);
 });
+//POST method for update function as mi-linux.wlv.ac.uk server does not support PUT and DELETE function.
+
 
 Route::get('/posts/{post}',function(Posts $post){
 
     $post->delete();
 });
+//POST method for update function as mi-linux.wlv.ac.uk server does not support PUT and DELETE function.
+
 Route::get('/admins',function(){
     return Admins::all();
 });
@@ -44,7 +50,6 @@ Route::get('/admins/verify/{uname}',function(String $uname){
 });
 
 Route::post('/admins',function(){
-
     return Admins::create([
         'uname'=>request('uname'),
         'pswrd'=>request('pswrd')
