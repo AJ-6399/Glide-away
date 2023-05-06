@@ -28,6 +28,7 @@ Route::post('/posts/{id}',function(Posts $id){
 
         'title'=>request('title'),
         'description'=>request('description'),
+        'imageUrl'=>request('imageUrl')
     ]);
 });
 
