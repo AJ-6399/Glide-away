@@ -7,17 +7,15 @@ export default function AdminPage() {
 const [data,setData]=useState([])
 var length;
 const originaccess={"Access-Control-Allow-Origin":"*"};
-
 const fetchData=()=>{
  axios.get("https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/posts",{
   headers: {
     "Accept": "application/json",
     'Content-Type': 'application/json',
     originaccess
- } 
+ } // Fetching data from backend API with axios
  }).then(
     (res)=>{
-      
         setData(res.data);
         length=res.data.length;
         console.log(length);
@@ -29,7 +27,7 @@ function deleteItem(id){
         "Accept": "application/json",
         'Content-Type': 'application/json',
         originaccess
-     } 
+     } //Deleting an item function with axios GET method.
     })
     .then(()=>{
         fetchData();
@@ -45,7 +43,7 @@ function storeLocal(id,title,description,imageUrl){
  localStorage.setItem("title",title);
  localStorage.setItem("description",description);
  localStorage.setItem("imageUrl",imageUrl);
-
+//Using local storage of browser to add temporary data.
 }
     return (
         <div>
@@ -76,6 +74,7 @@ function storeLocal(id,title,description,imageUrl){
           <td>{item.title}</td>
           <td>{item.imageUrl.slice(0,40)+"....."}</td>
           <td>{item.description.slice(0,30)+"....."}</td>
+          
           <td>
             <Link to='/update'>
             <button onClick={()=>storeLocal(item.id,item.title,item.description,item.imageUrl)} type="button" className="btn btn-primary mx-1">Edit</button>

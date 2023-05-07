@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
+import {redirect} from 'react'
 
 export default function Admin(){
     const[username,setUsername]=useState([])
@@ -10,7 +11,7 @@ export default function Admin(){
  
   function handleLoginClick(u,pswrd){
   axios.get(`https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/admins/verify/${u}`).then((res)=>{
-  if(res.data.length!==0&&pswrd!=null)
+  if(res.data.length!==0&&pswrd!==null)
   {
     //adminRedirect('/dashboard')'
     alert('Login Successfull');

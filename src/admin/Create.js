@@ -3,11 +3,11 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 export default function Create() {
-    const [title,setTitle]=useState([])
-    const [url,setUrl]=useState([])
-    const [description,setDescription]=useState([])
+    const [title,setTitle]=useState([])//Change state of title input
+    const [url,setUrl]=useState([])//Change state of url input
+    const [description,setDescription]=useState([])//Change state of description input
     const header={"Access-Control-Allow-Origin":"*"};
-    const addRedirect=useNavigate();
+    const addRedirect=useNavigate();//Navigate user to certain page.
 
     const createPost=(e)=>{
         e.preventDefault();
@@ -16,6 +16,7 @@ export default function Create() {
             "title":title,
             "description":description,
             "imageUrl":url,
+            //Creating new data with above fields using POST method and axios.
             header  ,
             headers: {
               "Accept": "application/json",
@@ -23,7 +24,7 @@ export default function Create() {
            } 
         });
         alert('Item added');
-        addRedirect('/dashboard');
+        addRedirect('/dashboard');//Redirecting user.
     }
   return (
     <center>

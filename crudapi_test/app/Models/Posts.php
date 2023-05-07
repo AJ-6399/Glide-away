@@ -14,4 +14,5 @@ class Posts extends Model
         'description',
         'imageUrl'
     ];
+    //Adding fillable variables needed for the database table.
 }

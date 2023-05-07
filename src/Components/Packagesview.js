@@ -26,6 +26,7 @@ export class Packagesview extends Component {
       localStorage.setItem("title",title);
       localStorage.setItem("description",description);
       localStorage.setItem("imageUrl",imageUrl); 
+      //On view itinerary button click, storing temporary data to browser localstorage.
      }
       return (
         <div className='container my-4'>

@@ -10,6 +10,7 @@ import Itinerary from './Components/Itinerary';
 import Home from './Components/Home';
 
 function App() {
+  //Assigning routes for navigation of pages.
   return (
     <div>
 
@@ -22,7 +23,7 @@ function App() {
       <Route path="/dashboard" element={<AdminPage/>}/>
       <Route path="/update" element={<Update/>}/>
       <Route path="/itinerary" element={<Itinerary/>}/>
-      <Route path="/*" element={<Notfound/>}/>
+      <Route path="/*" element={<Notfound/>}/> 
     </Routes>
     </BrowserRouter>
     </div>

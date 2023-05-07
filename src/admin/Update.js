@@ -24,6 +24,7 @@ export default function Update() {
      "title":title,
      "description":description,
      "imageUrl":url,
+     //Updating existing data with above fields using POST method and axios.
       header,
       headers: {
         "Accept": "application/json",
@@ -40,19 +41,19 @@ export default function Update() {
        <div style={{color:'white'}}><h2>Update item</h2></div> 
       <div className='col g-3 my-4'>
         <div className="col-auto ">
-    <input onChange={(e)=>setTitle(e.target.value)} type="text" value={title}
+    <input onChange={(e)=>setTitle(e.target.value)} type="text" value={title} //Fetching input entered from user
     className="form-control my-3" id="Title" placeholder="Title"/>
   </div>
   <div className="col">
-    <textarea onChange={(e)=>setDescription(e.target.value)}  type="text" value={description} 
-    className="form-control my-3" placeholder='Description' rows="9"/>
+    <textarea onChange={(e)=>setDescription(e.target.value)}  type="text" value={description} //Fetching input entered from user
+    className="form-control my-3" placeholder='Description' rows="9"/> 
   </div>
   <div className="col">
-    <input onChange={(e)=>setUrl(e.target.value)}  type="text" value={url}
+    <input onChange={(e)=>setUrl(e.target.value)}  type="text" value={url}//Fetching input entered from user
     className="form-control my-3" id="ImageUrl" placeholder="ImageUrl" />
   </div>
   <div className="col">
-    <button onClick={()=>update(id)} className="btn btn-primary my-3" >Update</button>
+    <button onClick={()=>update(id)} className="btn btn-primary my-3" >Update</button> 
   </div>
 </div>
     </div>

@@ -1,13 +1,16 @@
 import React,{useState,useEffect} from 'react'
 export default function Itinerary() {
     const [title,setTitle]=useState([])//to use setTitle to change state of title
-    const [url,setUrl]=useState([])//to use setUrl to change state of url
+    const [url,setUrl]=useState([])    //to use setUrl to change state of url
     const [description,setDescription]=useState([])//to use setDescription to change state of description
   
 useEffect(() => {
          setTitle(localStorage.getItem("title"));
+         //Setting state of title with value stored in local storage
          setUrl(localStorage.getItem("imageUrl"));
+         //Setting state of url with value stored in local storage
          setDescription(localStorage.getItem("description"));
+         //Setting state of description with value stored in local storage
        }, [])
   return (
     <div>
@@ -18,7 +21,7 @@ useEffect(() => {
     <div className="carousel-item active">
       <img style={{filter:'brightness(40%)'}} className="a-block" width="1600" height="600" src={url} alt="First slide"/>
       <div className="carousel-caption d-none d-md-block">
-    <h1 style={{fontWeight:"900",fontSize:50}} >{title}</h1>
+    <h1 style={{fontWeight:"900",fontSize:50}} >{title} </h1>
   </div>
     </div>
   </div>

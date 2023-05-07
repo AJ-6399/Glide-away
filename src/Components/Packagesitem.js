@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 export class Packagesitem extends Component {
   render() {
     let {title,description,imageUrl,viewitn}=this.props;
-
+    //Implementing packages card model by assigning props.
     return (
       <div>
     <div className="card" style={{width: "18rem"}}>
