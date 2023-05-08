@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Packagesitem from '../Components/Packagesitem';
 
-test('Testing the Navbar Title',()=>{
+test('Testing the button text',()=>{
     render(<Packagesitem/>);
     const btntext = screen.getByText(/view itinerary/i);
     expect(btntext).toBeInTheDocument(); 
