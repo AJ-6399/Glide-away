@@ -2,7 +2,7 @@ import React from 'react'
 import Admin from './Login';
 
 export default function Nav() {
-  var menuitems=["Home","Packages"];
+  var menuitems=["Home","Packages","Admin"];
   return (
     <div data-testid="navbar" style={{backgroundColor:'black'}}>
     <nav className="navbar navbar-expand-lg bg-warning" >
@@ -18,6 +18,9 @@ export default function Nav() {
     </li>
     <li data-testid="menuitem" className="fw-bold">
       <a className="nav-link active" style={{fontSize:20,}} href="/packages">{menuitems[1]}</a>
+    </li>
+    <li data-testid="menuitem" className="fw-bold">
+      <a className="nav-link active" style={{fontSize:20,}} href="/dashboard">{menuitems[2]}</a>
     </li>
   </ul>
 </div>

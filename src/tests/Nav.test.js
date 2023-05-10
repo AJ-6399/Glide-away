@@ -19,9 +19,9 @@ test('Testing Navbar Menu 2',()=>{
     const contact_us = screen.getByText(/packages/i);
     expect(contact_us).toBeInTheDocument(); 
 })
-test('Checking Menu items to be 2',()=>{
+test('Checking Menu items to be 3',()=>{
     render(<BrowserRouter><Nav/></BrowserRouter>);
     const listitems = screen.getAllByRole("listitem");
-    expect(listitems).toHaveLength(2); 
+    expect(listitems).toHaveLength(3); 
 })
 

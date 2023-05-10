@@ -1,19 +1,19 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
-import {useNavigate} from 'react'
+//import {useNavigate} from 'react-router-dom'
 
 export default function Admin(){
     const[username,setUsername]=useState([])
     const[password,setPassword]=useState([])
   
-  const adminRedirect=useNavigate();
+  //const adminRedirect=useNavigate();
  
   function handleLoginClick(u,pswrd){
   axios.get(`https://mi-linux.wlv.ac.uk/~2311275/crudapi_test/public/api/admins/verify/${u}`).then((res)=>{
   if(res.data.length!==0&&pswrd!==null)
   {
-    adminRedirect('/dashboard');
+   // adminRedirect('/dashboard');
     alert('Login Successfull');
    
   }
