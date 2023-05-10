@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Create from '../admin/Create';
 import { BrowserRouter } from 'react-router-dom';
-
 test('Testing if it has 3 input fields',()=>{
     render(
     <BrowserRouter>
